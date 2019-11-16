@@ -22,6 +22,13 @@ public class Hello {
         b = ++a;
         System.out.println("abcdefg");
         System.out.println("b = " + b);
+        
+        double F, C=23;
+        java.util.Scanner sc = new java.util.Scanner(System.in);    //allow user to input
+        System.out.print("請輸入攝氏溫度 : ");
+        double inputC = sc.nextDouble();
+        F = inputC * 9/5 + 32;
+        System.out.printf("F = %.1f  %.2f  - yes \n", F, F);
        
     }
 }
