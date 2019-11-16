@@ -25,10 +25,18 @@ public class Hello {
         
         double F, C=23;
         java.util.Scanner sc = new java.util.Scanner(System.in);    //allow user to input
-        System.out.print("請輸入攝氏溫度 : ");
-        double inputC = sc.nextDouble();
-        F = inputC * 9/5 + 32;
-        System.out.printf("F = %.1f  %.2f  - yes \n", F, F);
-       
+        System.out.print("請輸入 1) C ->F,  2) F->C    : ");
+        int userChoice = sc.nextInt();
+        System.out.print("請輸入欲查詢的溫度 : ");
+        double input = sc.nextDouble();
+        
+        if(userChoice == 1) {
+            double result = input * 9/5 + 32;   
+            System.out.println(">>> " + result + " 'F");
+        } else {
+            double result = (input-32)* 5/9;                        
+            System.out.println(">>> " + result + " 'C");
+        }
+        
     }
 }
